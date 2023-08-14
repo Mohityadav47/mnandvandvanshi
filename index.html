@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+   <link rel="icon" type="imge/x-icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="pass.png">
+    <title>Mohitzyadavweb</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    resize: none;
+    outline: none;
+
+}
+:root{
+    --color-primary:#111;
+    --color-secondry:rgb(239, 10, 56);
+    --color-tertiary:#777;
+    --color-text:#fff;
+--shadow:0 2px 40px 8px rgba(15,15,15,.15);
+transition: all .4s ease-in-out;
+--linear-gradient:linear-gradient(to right,crimson 0%,hotpink 51%, crimson 100%);
+--width-lg:85%;
+--width-sm:95%;
+
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  line-height: 1.7;
+  height: 111vh;
+
+
+}
+::-webkit-scrollbar{
+    height: .5rem;
+    width: .5rem;
+    
+}
+::-webkit-scrollbar-track{
+background: var(--color-primary);
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+}
+a,span p{
+    font-size: .9rem;
+    
+}
+h1{
+        font-size: 2.7rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3
+      {  font-size: 1.7rem;
+    }
+    h4{
+        font-size: 1.4rem;
+    }
+
+    .container{
+        width: var(--width-lg);
+        margin: 0 auto;
+
+    }
+    section{
+        padding: 6rem 0 3rem;
+    }
+    nav{
+        background:var(--color-primary);
+        color: var(--color-text);
+
+    }
+    .nav-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .logo a{
+        font-size: 2rem;
+font-weight: 700;
+color: var(--color-text);
+
+    }
+    .logo span{
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-secondry);
+    }
+    .navlist{
+        display: flex;
+    }
+    .navlist li{
+        padding:  1rem 2rem ;
+
+    }
+    .navlist li a{
+        color: var(--color-text);
+        font-weight: 500;
+        padding: 1rem 2rem;
+        text-transform: capitalize;
+        transition: var(--transition);
+
+    }
+    .navlist li a:hover,.navlist li a.active{
+        color: var(--color-secondry);
+    }
+    .menu-btn{
+        display: none;
+    }
+
+    .menu-btn i{
+color: var(--color-text);
+font-size: 1.1rem;
+    }
+    .social-icons{
+        display: flex;
+        gap:2rem;
+
+    }
+    .social-icons a{
+        color: var(--color-text);
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--color-primary);
+z-index: 11;
+overflow: hidden;
+position: relative;
+
+    }
+    .social-icons a::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: var(--color-secondry);
+        z-index: -1;
+        transform: scale(0);
+        transition: var(--transition);
+
+        transition-duration: .3s;
+    }
+    .social-icons a:hover::before{
+        transform: scale(1);
+    }
+    .home{
+      background: url(portfolio123.jpg);
+      background-size:cover;
+      background-position: center;
+      height: 100%;
+      width: 100%;
+
+    }
+    .home .content{
+         position: relative;
+         transform: translate(0,45%);
+         max-width: 550px;
+
+    }
+    .home .content h1{
+        font-size: 3.3rem;
+
+    margin-left: 75px
+    }
+    .home .content h1 span{
+        font-size: 4rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+        font-weight: 800;
+        text-transform: uppercase;
+color: transparent;
+-webkit-text-stroke: .1rem crimson;
+background-color:#000000;
+        background-image: linear-gradient(160deg,#000000 0%,#8085d0 100%);
+-webkit-background-clip: text;
+background-position: 0 0 ;
+
+animation: back 20s linear infinite}
+@keyframes back 
+{
+100%{
+    background-position: 2000px 0 ;
+}
+    
+}
+.home .content h3{
+    font-weight: 400;
+    margin-left: 60px;
+
+}
+.home .content p{
+    color: var(--color-tertiary);
+    padding: 1rem 0 1.5rem;
+    margin-left: 60px;
+
+}
+.btn
+{
+    padding: 1rem 2rem;
+    color: var(--color-text);
+  
+        background: var(--linear-gradient);
+background-size: 200% auto;
+border-radius: .2rem;
+font-weight: 700;
+font-size: .77rem;
+text-transform: uppercase;
+cursor: pointer;
+box-shadow: var(--shadow);
+transition: var(--transition);
+margin-left: 30px;
+
+
+}
+ .content .btn:hover{
+    background-position: right center;
+}
+.home-btns{
+    display: flex;
+gap: 0rem;
+}
+.home .btn a{
+    color: #fff;
+}
+.home-btns .btn:last-child{
+    background: transparent;
+border: .09rem solid var(--color-text);
+}
+/* <!-- About secion hai yr ==========
+    -0-0-0 --> */
+.title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.title h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+    position: relative;
+
+}
+.title h1::before{
+    content: 'About';
+
+position:absolute;
+font-size: 4rem;
+text-transform: uppercase;
+color: var(--color-tertiary);
+z-index: -1;
+opacity: .15;
+bottom: 50%;
+left: 50%;
+transform: translate(-50%,50%);
+
+
+}
+.about .title h1::before{
+    content: 'About';
+}
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+
+}
+.about-container .left img{
+    max-width: 500px;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+
+
+}
+.about-container .right{
+    margin: auto;
+
+}
+.about-container h2 span{
+color: var(--color-secondry);
+font-size: 2.2rem;
+
+
+}
+
+.about-container .right h4 {
+color: var(--color-secondry);
+font-size: 1.2rem;
+font-weight: 600;
+
+}
+.about-container .right p {
+color: var(--color-tertiary);
+padding: 1rem 0;
+
+}
+.about-container .stats .box{
+    margin: 1rem 0;
+
+}
+.about-container .stats h5{
+    font-size: 1rem;
+
+}
+.about-container .stats span{
+    display: block;
+    position: relative;
+}
+
+
+.about-container .stats span::before
+{
+    content: '';
+    position: absolute;
+bottom: -.5rem;
+left: 0;
+height: .5rem;
+width: 100%;
+background: #fff4;
+border-radius: 2rem;
+}
+.about-container .stats span::after
+{
+    content: '';
+    position: absolute;
+bottom: -.5rem;
+left: 0;
+height: .5rem;
+width: 100%;
+background: var(--color-secondry);
+border-radius: 2rem;
+animation: mmm 3s infinite;
+
+}
+
+@keyframes mmm {
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 87%;
+        }
+    }
+
+.about-container .stats .box:nth-child(2) span::after{
+    width: 70%;
+}
+.about-container .stats .box:nth-child(3) span::after{
+    width: 66%;
+}
+
+.about-container .stats .box:nth-child(4) span::after{
+    width: 50%;
+}
+
+.about-container .stats .box:nth-child(5) span::after{
+    width: 60%;
+}
+
+.services .title h1::before{
+content: 'SERVICES';
+
+
+
+}
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-right: 9px;
+}
+.services-container .box{
+    width: calc(33.33% -1rem);
+    padding: 0 3rem;
+    transition: var(--transition);
+    background: #fff1;
+    text-align: center;
+
+}
+.services-container .box h4{
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+}
+.services-container .box i{
+    font-size: 4rem ;
+    color: var(--color-secondry);
+    transition: var(--transition);
+
+}
+.services-container .box:hover{
+    background: linear-gradient(90deg,#e34086 0%,#e59252 100%);
+}
+.services-container .box:hover i{
+color: var(--color-text);
+}
+
+.services-container .box hr{
+background: var(--linear-gradient);
+
+height: .15rem;
+width: 100%;
+border: 0;
+border-radius: 2rem;
+margin-top: 1.5rem;
+
+
+}
+.services-container .box .btn{
+    background: none;
+    margin: 1rem 0;
+    border-radius: 0;
+    box-shadow: none;
+
+
+}
+.services-container .box .btn:hover{
+
+letter-spacing: .1rem;
+color: var(--color-secondry);
+  }
+/* contact css hai ye yaha se  ho sMAJ JANA JADA DIMAG MT LAGANA BNHA I */ 
+
+.contact .title h1::before
+{
+    content: 'CONTACT';
+
+}
+.contact .title{
+    margin-bottom:9rem ;
+
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 40% 60% ;
+    gap: 4rem;
+    padding: 4rem;
+    height: 25rem;
+background: #fff1;
+margin: 7rem auto;
+border-radius: 1rem;    
+    }
+    .contact-aside
+{
+background: var(--color-secondry);
+padding: 2rem;
+border-radius: 1rem;
+position: relative;
+bottom: 10rem;
+
+}
+.contact-aside h2{
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+}
+.contact-aside p{
+    margin-bottom: 2rem;
+     
+}
+.contact-info li{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    }
+.contact-info li h5{
+    font-weight: 500;
+font-size: .8rem;
+
+}.contact .social-icons {
+    gap: 1.3rem;
+}
+.contact .social-icons i{
+color: var(--color-secondry);
+
+} 
+.contact .social-icons a{
+    background: var(--color-text);
+}
+.contact .social-icons a::before{
+    background: var(--color-primary);
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+gap: 1.2rem;
+margin-right: 2rem;
+}
+.contact-form .form-name{
+    display: flex;
+    gap: 1.2rem;
+ 
+}
+.contact-form input[type ='text']{
+    width: 50%;
+}
+.contact-form input,.contact-form textarea{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: .2rem;
+}
+.contact-form .btn{
+    max-width: 22rem;
+}
+.footer{
+    background: #fff1;
+    padding: 5rem 0;
+}.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+color: var(--color-text);
+
+}
+.footer-container .logo{
+    margin-bottom: 2rem;
+}
+.footer-container .box:first-child p{
+    color: var(--color-tertiary);
+
+}
+.footer-container h5{
+    font-size: 1.1rem;
+padding-bottom: 2rem;
+text-transform: uppercase;
+
+}
+.footer-container .nav li{
+padding-bottom: .8rem;
+text-transform: capitalize;
+
+}
+.footer-container .nav li a{
+    color: var(--color-text);
+    transition: var(--transition);
+
+}
+.footer-container .nav li a:hover{
+   color: var(--color-secondry);
+}
+.footer-container .nav li i{
+ margin-right: 1.5rem;
+ transition: var(--transition);
+
+}
+.footer-container .nav li:hover i{
+    margin-left: .5rem;
+margin-right: 1rem;
+}
+.footer-container .box .post img{
+height: 64px;
+width: 65px;
+border-radius: .3rem;
+
+box-shadow: var(--shadow);
+}
+.footer-container .box .post {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+
+}
+.footer-container .box .post h4{
+    font-size: .9rem;
+}
+.footer-container .box .post:hover h4{
+    color: var(--color-secondry);
+}
+.footer-container .post span{
+    color: var(--color-tertiary);
+}
+.footer .contact-box p{
+margin-bottom: 1.2rem;
+
+}
+.footer .contact-box i{
+    display: inline-block;
+    width: 100%;
+margin: .7rem 0;
+}
+.copyright{
+    text-align: center;
+    font-size: .9rem;
+    padding: 1rem 0;
+}
+.copyright a{
+    color: var(--color-secondry);
+}
+/* responsive................> */
+@media (max-width:1050px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h4{
+    font-size: 1.1rem;
+    }
+    .container{
+        width: var(var(--width-sm));
+    }
+    section{
+        padding: 3rem 0;
+    }
+    .menu-btn{
+        display: flex;
+    }
+.navlist{
+    flex-direction: column;
+    position: absolute;
+    top: 9%;
+    right: 0;
+    width: 100%;
+    background: var(--color-primary);
+    box-shadow: var(--shadow);
+    text-align: center;
+    z-index: 111;
+transition: var(--transition);
+transform: scale(0);
+}
+.navlist li{
+    padding: 1rem 0;
+}
+.navlist.active{
+    transform: scale(1);
+}
+.about-container{
+    grid-template-columns: 1fr;
+}
+.about-container .left{
+    margin: auto;
+}
+}
+
+@media (max-width:850px) {
+    .home .content  h1 span{
+        font-size: 3rem;
+        }
+        .services-container .box{
+            width: calc(50% - 1.5rem);
+
+        }
+        .work-container .tab-content{
+grid-template-columns: 1fr 1fr;
+        }
+.contact-container{
+    grid-template-columns: 100%;
+    gap: 4rem 0;
+    padding: 1rem;
+    height: auto;
+
+}
+.contact-aside{
+    bottom: 0;
+}
+.footer-container{
+    grid-template-columns: 1fr 1fr;
+}
+}
+/* 
+mobile responsive yha par se */
+
+
+
+@media (max-width:660px) {
+    .title height::before{
+        font-size: 3rem;
+    }
+nav .social-icons{
+    gap: 1rem;
+}
+.services-container .box{
+    width: 100%;
+}
+.work-container .tab-content{
+    grid-template-columns: 1fe;
+}
+.porfolio-tab{
+    padding: .5rem 1rem;
+
+}
+.testimonial .portfolio{
+    flex-direction: column;
+    align-items: center;
+margin-top: 2rem;
+}
+.footer-container{
+    grid-template-columns: 1fr;
+}
+.home{
+    width: 100%;
+}
+.home .content h1 span {
+    font-size: 2.5rem;
+}
+.btn{
+    /* width: 26%;
+    height: 2%;
+    font-size: 12px; */
+}
+.home .content h1{
+    margin-left: 12px;
+    font-size: 25px;
+}
+.home .content h1 span{
+    font-size: 30px;
+}
+.home .content h3{
+    margin-left: 9px;
+    font-size: 20px;
+
+}
+.home .content p{
+    width: 65%;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 13px;
+   margin-left: 4px;
+}
+.menu-btn i{
+    font-size: 27px;
+}
+.home{
+      background: url(portfolio123.jpg);
+    background-size: cover;
+      background-position:650px;
+      /* height: 100%;
+      width: 100%; */
+
+    }
+    .logo a{
+margin-right: 1rem;
+font-size: 27px;
+    }
+    .logo span{
+        font-size: 27px;
+    }
+.social-icons{
+    font-size: 20px;
+    align-items: center;
+}
+.nav-container{
+    width: 100%;
+}
+#hirebtn{
+    position: absolute;
+    bottom: -15%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    
+    <nav>
+        <div class="container nav-container ">
+            <div class="logo">
+                <a href="#">MOHi<span>T</span></a>
+            </div>
+            <ul class="navlist">
+                <li ><a href="#home">Home</a></li>
+                <li><a href="#about"> About</a></li>
+                <li><a href="#services">Services</a></li>
+                <!-- <li> <a href="#work"> Work</a></li> -->
+                <li> <a href="#contact"> contact</a></li>
+            </ul>
+            <div class="social-icons">
+                
+                <a href="https://github.com/Mohityadav47"><i class="ri-github-fill"></i></a>
+                <a href="https://instagram.com/_mohit_yadav_47?utm_source=qr&igshid=ZDe4DBmNjlmNQ%3D%3D"><i class="ri-instagram-fill"></i></a>
+                <a href="https://www.facebook.com/mohit.ahir.397948"><i class="ri-facebook-fill"></i></a>
+               <a href="https://www.linkedin.com/in/mohit-yadav-a59697260"><i class="ri-linkedin-fill"></i></a>
+               <div class="menu-btn">
+                <span><i class="ri-menu-3-fill"></i></span>
+            </div>
+            </div>
+        
+        </div>
+    </nav>
+    <section id="home" class="home">
+        <div class="container home-container"></div>
+        <div class="content">
+
+
+    <h3>Hello</h3>
+    <h1>I'M  <span>MOHIT</span></h1>
+  <h3>A web Devloper</h3>
+  <p>I have been working as a web devloper for a quit some time now. i believe i am a very ambitious person who loves to work on making the website work well.
+</p>
+  <div class="home-btns">
+    <button class="btn"><a href="mohitresume123.pdf">Downlod CV</a></button>
+    <button class="btn" id="hirebtn">Hire me</button>
+</div>
+  </div>  
+    </section>
+    <!-- About secion hai yr ==========
+    -0-0-0 -->
+    <section
+    class="about" id="about">
+<div class="title">
+    <h1>About Me</h1>
+
+</div>
+<div class="container about-container">
+    <div class="left">
+        <span>
+
+        </span>
+<div class="image">
+    <img src="hhhhhh.jpg" >
+</div>
+
+    </div>
+<div class="right">
+    <div class="content">
+       <h2> <span>Mohit Yadav </span></h2>
+       <h3>A web Devloper </h3>
+
+<p>
+ I have been working as a web devloper for a quit some time now. i believe i am a very ambitious person who loves to work on making the website work well.
+
+</p>
+<div class="stats">
+    <div class="box">
+        <h5>html</h5>
+        <span>90%</span>
+
+
+    </div>
+    <div class="box">
+        <h5>css </h5>
+        <span>90%</span>
+
+
+    </div>
+    <div class="box">
+        <h5>javascript</h5>
+        <span>60%</span>
+
+
+    </div>
+    <div class="box">
+        <h5>php</h5>
+        <span>60%</span>
+
+
+    </div>
+    <div class="box">
+        <h5>java</h5>
+        <span>60%</span>
+
+
+    </div>
+</div>
+    </div>
+</div>
+</div>
+</section>
+<!-- servicece <section></section> -->
+
+
+<section class="services" id="services">
+
+
+<div class="title">
+    <h1>My Services</h1>
+</div>
+<div class="container services-container">
+<div class="box">
+    <div class="content">
+        <i class="ri-html5-fill"></i>
+        <h4>WEB DEVLOPMENT</h4>
+        <hr>
+        <button class="btn"> BOOK Services</button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="content">
+        <i class="ri-paint-fill"></i>
+        <h4>WEB Desgning</h4>
+        <hr>
+        <button class="btn"> BOOK Services</button>
+    </div>
+</div>
+<div class="box">
+    <div class="content">
+        <i class="ri-stack-fill"></i>
+        <h4>Full Stack</h4>
+        <hr>
+        <button class="btn"> BOOK Services</button>
+    </div>
+</div>
+<!-- <div class="box">
+    <div class="content">
+        <i class="ri-css3-fill"></i>
+        <h4>App DEVLOPMENT</h4>
+        <hr>
+        <button class="btn"> BOOK Services</button>
+    </div>
+</div>
+<div class="box">
+    <div class="content">
+        <i class="ri-bug-fill"></i>
+        <h4>Bug Fixing</h4>
+        <hr>
+        <button class="btn"> BOOK Services</button>
+    </div>
+</div> -->
+    <div class="box">
+        <div class="content">
+            <i class="ri-javascript-fill"></i>
+            <h4>Backend</h4>
+            <hr>
+            <button class="btn"> BOOK Services</button>
+        </div>
+    </div> 
+
+</div>
+</section>
+<!-- <section class="work"  id="work">
+
+    <div class="title">
+        <h1>My Latest Work</h1>
+
+    </div>
+    <div class="container work-container">
+        <div class="porfolio-buttons">
+<button class="btn portfolio-tab active">
+    All
+</button>
+<button class="btn portfolio-tab active">
+    Frontend 
+</button>
+<button class="btn portfolio-tab active">
+    bakend
+</button>
+<button class="btn portfolio-tab active">
+    App devlopment 
+</button>
+        </div>
+    
+    <div class="tab-content  active-content" id="all">
+        <img src="pass.png" alt="">
+
+    </div>
+    
+    </div>
+
+</section> -->
+
+<section class="contact" id="contact">
+    <div class="title">
+        <h1>Contact</h1>
+    </div>
+    <div class="container contact-container">
+        <aside class="contact-aside">
+<h2>Contact Me</h2>
+<p>You Can Contact me Here  </p> 
+
+<ul class="contact-info">
+
+    <li>
+        <i class="ri-cellphone-fill">
+
+        </i>
+<h5>6260626147 </h5>
+
+    </li>
+<li>
+    <i class="ri-mail-fill"></i>
+    <h5>mohitnandvanshi3@gmail.com</h5>
+</li>
+<li>
+    <i class="ri-map-pin-fill"></i>
+    <h5>Burhaanpur Mp india</h5>
+</li>
+</ul>
+<div class="social-icons">
+    <a href="https://github.com/Mohityadav47"><i class="ri-github-fill"></i></a>
+    <a href="https://www.facebook.com/mohit.ahir.397948"><i class="ri-facebook-fill"></i></a>
+    <a href="https://instagram.com/_mohit_yadav_47?utm_source=qr&igshid=ZDe4DBmNjlmNQ%3D%3D"><i class="ri-instagram-fill"></i></a>
+    <a href="https://www.linkedin.com/in/mohit-yadav-a59697260"><i class="ri-linkedin-fill"></i></a>
+</div>
+        </aside>
+        <form action="" class="contact-form">
+            <div class="form-name">
+                <input type="text" name="First name" placeholder="first name" required>
+                <input type="text" name="last name" placeholder="last name" required>
+                
+            </div>
+            <input type="email" name="email Adress" placeholder="your email address" required>
+            <textarea name="message" placeholder="message" rows="7"  required></textarea>
+                <button type="submit" class="btn" >Send message</button>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="box">
+            <div class="logo">
+                <a href="home">MOHi<span>T</span></a>
+            </div>
+            <p> Working on the website work well. Working on the web is my passion as i loves to work on exiciting projects  </p>
+        </div>
+    <div class="box">
+        <h5>Quik Link</h5>
+ <div class="nav">
+    <li ><i class="ri-arrow-right-fill"></i><a href="#home">Home</a></li>
+    <li><i class="ri-arrow-right-fill"></i><a href="#about"> About</a></li>
+    <li><i class="ri-arrow-right-fill"></i><a href="#services">Services</a></li>
+    <!-- <li> <i class="ri-arrow-right-fill"></i><a href="#work"> Work</a></li> -->
+    <li> <i class="ri-arrow-right-fill"></i><a href="#contact"> contact</a></li>
+ </div></div>
+ <div class="box">
+    <h5>recent  post</h5>
+    <div class="post">
+        <img src="techno1.jpg" alt="">
+   <div>
+    <h4>Creating web page </h4>
+<span>12 july 2022</span>
+   </div> 
+</div>
+
+
+  
+    <div class="post">
+        <img src="techno2.jpg" alt="">
+<div>
+    <h4>Creating Design </h4>
+<span>05 jan 2023</span>
+</div>
+</div>
+
+
+    <div class="post">
+        <img src="techno3.jpg" alt="">
+<div>
+    <h4>Creating web page </h4>
+<span>09 jan 2023</span>
+</div>
+</div>
+    </div>
+
+<div class="box contact-box
+">
+<h5>contact info</h5>
+<p>You Can Contact me Here </p>
+<i class="ri-cellphone-fill">6260626147</i>
+<i class="ri-mail-fill">mohitnandvanshi3@gmail.com</i>
+<i class="ri-map-pin-fill">Nandura Khurd , burhaanpur (mp)</i>
+
+</div>
+</div>
+
+
+    
+
+</footer>
+<div class="copyright">
+    <p>Copyright &copy; 2023
+    <i class="ri-heart-fill"></i> MohitYadav .All right reserved. <a href="www.yowjtk trjoj"></a>
+    </p>
+</div>
+<script>
+
+const menubtn = document.querySelector('.ri-menu-3-fill');
+const navList = document.querySelector('.navlist');
+menubtn.onclick = function(){
+menubtn.classList.toggle('ri-arrow-up-double-line');
+navList.classList.toggle('active');
+}
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
